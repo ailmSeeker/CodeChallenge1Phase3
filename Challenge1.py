@@ -1,8 +1,16 @@
 def convertTime(time):
+    # finds the am or pm 
+
     index = time.find('m')
+
+    # finds the point before hours
     f_hour = time.find(':')
+
+    # finds the minutes with the hour index
     minutes = time[f_hour + 1] + time[f_hour + 2]
 
+
+    # logic to determine if we should make a change to normal to military time
     if(f_hour > 1):
         hour = time[f_hour - 2] + time[f_hour - 1]
 
